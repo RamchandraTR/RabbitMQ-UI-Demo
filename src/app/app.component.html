@@ -1,0 +1,33 @@
+<div>
+  <h1>{{title}}</h1>
+</div>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>BatchId</th>
+        <th>BatchName</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of batchList">
+        <td>{{item.batchId}}</td>
+        <td>{{item.batchName}}</td>
+        <td>{{item.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <button type="button" class="btn btn-primary" (click)="PostBatch()">Batch</button>
+      <button style="margin-left: 10px;" type="button" class="btn btn-primary" (click)="refresh()">Refresh</button>
+    </div>
+    <div class="col-sm"></div>
+  </div>
+</div>
